@@ -1,0 +1,22 @@
+# # Example 1: redirect errors to html files
+# ErrorDocument 404 /404.html
+
+# # Example 2: redirect errors to PHP file
+# ErrorDocument 404 /error.php?q=404
+
+
+# <ifModule mod_rewrite.c>
+
+
+
+# #turn on .htaccess config
+# RewriteEngine on
+
+# #Hide all php extentions
+# REwriteCond %{REQUEST_FILENAME3} !-d
+
+# RewriteCond %{REQUEST_FILENAME}\.php -f
+
+
+# Rewrite ^(.*)$ $1.php [NC, L]
+
